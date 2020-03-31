@@ -20,8 +20,16 @@ class Triangle
   end
 
   def kind
-    if @sideA == @sideB && @sideB == @sideA
-      :equilateral
+    if valid?
+      if @sideA == @sideB && @sideB == @sideA
+        :equilateral
+      end
+    else
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
     end
   end
 
