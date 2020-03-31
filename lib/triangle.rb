@@ -1,8 +1,10 @@
 class Triangle
   attr_accessor :sideA, :sideB, :sideC
 
-  def initialize(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
+  def initialize(sideA, sideB, sideC)
+    @sideA = sideA
+    @sideB = sideB
+    @sideC = sideC
   end
 
   def valid?
