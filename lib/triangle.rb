@@ -21,8 +21,12 @@ class Triangle
 
   def kind
     if valid?
-      if @sideA == @sideB && @sideB == @sideA
+      if @sideA == @sideB && @sideB == @sideC
         :equilateral
+      elsif @sideA == @sideB || @sideB == @sideC
+        :isosceles
+      else
+        :scalene
       end
     else
       begin
