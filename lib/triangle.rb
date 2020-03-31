@@ -23,7 +23,7 @@ class Triangle
     if valid?
       if @sideA == @sideB && @sideB == @sideC
         :equilateral
-      elsif @sideA == @sideB || @sideB == @sideC
+      elsif @sideA == @sideB || @sideB == @sideC || @sideA == @sideC
         :isosceles
       else
         :scalene
